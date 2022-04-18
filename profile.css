@@ -1,0 +1,362 @@
+:root {
+    scroll-behavior: smooth;
+    --primary-theme-color: #20232a;
+    --secondary-theme-color: #282c34;
+    --text-color: #fff;
+    --primary-shadow-color: #8888;
+    --secondary-shadow-color: #21242c80;
+    --button-color: #61dafb;
+    --button-color-active: #fff;
+    --button-text-color: #000;
+    --primary-highlight-color: #61dafb;
+    --secondary-highlight-color: #ffd700;
+    --padding-section: 4rem 0;
+    --padding-container: 0 2rem;
+    --max-width-container: 1024px;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+
+    
+  }
+  
+  @keyframes tech-jump {
+    0% {
+      margin-top: 0;
+    }
+  
+    100% {
+      margin-top: 1rem;
+    }
+  }
+  
+  .pelicula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .pelicula__container {
+    display: grid;
+    gap: 2rem;
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding: var(--padding-container);
+  }
+  
+  .pelicula__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--secondary-shadow-color);
+    border-radius: var(--border-radius);
+    box-shadow:
+      0 0 0 0.125rem var(--primary-shadow-color),
+      0 0 0 0.25rem var(--primary-shadow-color);
+    padding: 1rem;
+    text-align: center;
+    transition: var(--all-transitions);
+  }
+  
+  .pelicula__info:hover {
+    box-shadow:
+      0 0 0 0.125rem var(--primary-highlight-color),
+      0 0 0 0.25rem var(--primary-highlight-color),
+      0 0 0.5rem 0 var(--secondary-highlight-color),
+      0 0 0.75rem 0 var(--secondary-highlight-color);
+  }
+  
+  .pelicula__info-title {
+    font-size: 1.125rem;
+    margin: 0;
+  }
+  
+  .pelicula__info-subtitle {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .pelicula__info-description {
+    display: none;
+  }
+  
+  .pelicula__info-link-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .pelicula__info-link {
+    text-align: center;
+    background-color: var(--button-color);
+    border-radius: var(--border-radius);
+    color: var(--button-text-color);
+    font-weight: 700;
+    text-shadow: 0 0 0.125rem var(--primary-highlight-color);
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+    transition: var(--all-transitions);
+  }
+  
+  .pelicula__info-link:hover,
+  .pelicula__info-link--active {
+    background-color: var(--button-color-active);
+  }
+  
+  .pelicula__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .pelicula__figure-image-container {
+    position: relative;
+   
+    display: flex;
+    max-width: 256px;
+    margin: 0;
+  }
+  
+  .pelicula__figure-image {
+    gap: 1em;
+    border-radius: 10%;
+    width: 100%;
+    transition: var(--all-transitions);
+   
+  }
+  
+  .pelicula__figure-image:hover {
+    box-shadow:
+      0 0 0.25rem 0 var(--primary-highlight-color),
+      0 0 0.5rem 0 var(--primary-highlight-color);
+  }
+  
+  .pelicula__figure-tech-one {
+    position: absolute;
+    width: 25%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -1s infinite alternate;
+    pointer-events: none;
+  }
+  
+  .pelicula__figure-tech-two {
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.75s infinite alternate;
+    pointer-events: none;
+  }
+  
+  .pelicula__figure-tech-three {
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.5s infinite alternate;
+    pointer-events: none;
+  }
+  
+  .pelicula__figure-tech-four {
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.25s infinite alternate;
+    pointer-events: none;
+  }
+
+
+
+
+  .registro {
+    
+    background-color: var(--secondary-theme-color);
+    color: var(--inverse-text-color);
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .registro-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+    max-width: 1024px;
+    margin: auto;
+  }
+  
+  .registro__tittle {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .registro__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .registro__form-input {
+    border: 0.25rem solid var(--button-text-color);
+    border-radius: 0.3rem;
+    padding: 0.75rem;
+    outline: none;
+    transition: all 0.5s;
+  }
+  
+  .registro__form-input:invalid {
+    box-shadow: 0 0 0.5rem 0 var(--button-color-active);
+  }
+  
+  .registro__form-input:invalid:required {
+    background-image: linear-gradient(to right, var(--highlight-color-1), var(--button-color-active));
+  }
+  
+  .registro__form-input:hover {
+    border: 0.25rem;
+
+  }
+  
+  .registro__form-input:focus {
+    border: 0.25rem solid var(--code-color);
+  }
+  
+  .registro__form-input::placeholder {
+    color: var(--code-color);
+    
+  }
+  
+  .registro__form-button {
+    align-self: center;
+    background-color: var(--button-color);
+    border: 0.1rem solid var(--highlight-color-1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--inverse-text-color);
+    transition: all 0.5s;
+  }
+  
+  .registro__form-button:hover {
+    border: 0.1rem solid var(--secondary-highlight-color);
+    background-color: var(--secondary-highlight-color);
+    color: #000;
+  }
+  
+  .footer {
+    background-color: var(--inverse-theme-color);
+    color: var(--inverse-text-color);
+    padding: 2rem 0;
+  }
+  
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+  
+  .footer-nav__link-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-nav__link-item {
+    list-style: none;
+  }
+  
+  .footer-nav__link {
+    display: flex;
+    width: 1.5rem;
+    transition: 0.25s all;
+  }
+  
+  .footer-nav__link:hover {
+    filter: brightness(150%);
+    transform: scale(1.5);
+  }
+  
+  .footer-nav__link-image {
+    width: 100%;
+  }
+  
+  .footer-nav__credits {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+    padding-top: 0.5rem;
+    box-shadow: 0 -0.25rem 0.25rem -0.25rem var(--theme-color);
+  }
+  
+  .footer-nav__credits-author {
+    color: var(--highlight-color-1);
+    text-decoration: none;
+  }
+  
+
+
+  
+  @media (min-width: 854px) {
+  
+    .pelicula__container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .pelicula__info {
+      padding: 2rem;
+      text-align: start;
+    }
+  
+    .pelicula__info-title {
+      font-size: 1.25rem;
+    }
+  
+    .pelicula__info-subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .pelicula__info-description {
+      display: flex;
+      margin: 0;
+    }
+  
+    .pelicula__info-link-container {
+      justify-content: flex-start;
+    }
+  
+    .pelicula__figure-image-container {
+      max-width: 360px;
+    }
+
+    .footer-nav {
+      padding: 0;
+      max-width: 1024px;
+      margin: auto;
+    }
+  
+    .footer-nav__link-list {
+      gap: 1.5rem;
+    }
+  
+    .footer-nav__link {
+      width: 2rem;
+    }
+
+
+
+
+  }
