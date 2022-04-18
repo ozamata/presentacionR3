@@ -9,7 +9,7 @@
     --button-color-active: #fff;
     --button-text-color: #000;
     --primary-highlight-color: #61dafb;
-    --secondary-highlight-color: #ffd700;
+    --secondary-highlight-color: #0aba36;
     --padding-section: 4rem 0;
     --padding-container: 0 2rem;
     --max-width-container: 1024px;
@@ -56,7 +56,8 @@
     border-radius: var(--border-radius);
     box-shadow:
       0 0 0 0.125rem var(--primary-shadow-color),
-      0 0 0 0.25rem var(--primary-shadow-color);
+      0 0 0 0.25rem var(--primary-shadow-color),
+      0 0 0 0.45rem var(--primary-shadow-color);
     padding: 1rem;
     text-align: center;
     transition: var(--all-transitions);
@@ -82,6 +83,9 @@
   
   .pelicula__info-description {
     display: none;
+    
+
+
   }
   
   .pelicula__info-link-container {
@@ -123,7 +127,6 @@
   }
   
   .pelicula__figure-image {
-    gap: 1em;
     border-radius: 10%;
     width: 100%;
     transition: var(--all-transitions);
@@ -175,9 +178,6 @@
     animation: tech-jump 1s ease-in-out -0.25s infinite alternate;
     pointer-events: none;
   }
-
-
-
 
   .registro {
     
@@ -313,7 +313,7 @@
   @media (min-width: 854px) {
   
     .pelicula__container {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr ;
     }
   
     .pelicula__info {
